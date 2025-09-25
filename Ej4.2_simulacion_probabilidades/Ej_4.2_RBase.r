@@ -1,5 +1,3 @@
-directorio<-readline(prompt="Escribe el directorio donde tienes el data frame")
-setwd(directorio)
 load("dataframe_ej4.2.RData")
 
 #Aqui vendria la recodificacion para crear las variables x de cada jugador. Como en R base no hay recodificar uso una estructura ifeslse
