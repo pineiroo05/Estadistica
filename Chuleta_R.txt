@@ -11,3 +11,4 @@
 #GUARDAR EL DATAFRAME: save(conj_datos, file="ConjDatos.RData")
 > Ojo, si luego lo quiero cargar y mostrar seria: load("ConjDatos.RData") y View(conj_datos)
 
+#PARA HACER LAS COMBINACIONES: choose(n, k)
