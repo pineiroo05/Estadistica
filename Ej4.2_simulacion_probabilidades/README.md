@@ -1,0 +1,1 @@
+-Ejercicio de simulacion de un circuito. El dataframe fue creado con RCommander, con el plugin teachstat, en concreto con el menu variables aleatorias/continuas/uniforme/muestra de distrib uniforme.
