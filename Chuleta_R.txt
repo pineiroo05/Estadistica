@@ -1,0 +1,13 @@
+#CREAR Y VISUALIZAR DATAFRAME EN CONSOLA R
+
+> nombres<-c("Sonia", "Ana", "Mario")
+> edades<-c(20, 21, 19)
+> ciudad_origen<-c("Ourense", "A Coruña", "Arteixo")
+> conj_datos<-data.frame(Nombres=nombres, Edades=edades, Ciudad_origen=ciudad_origen)
+> summary(conj_datos)
+
+#VER DIRECTORIO DE TRABAJO: getwd() // CAMBIARLO: setwd()
+
+#GUARDAR EL DATAFRAME: save(conj_datos, file="ConjDatos.RData")
+> Ojo, si luego lo quiero cargar y mostrar seria: load("ConjDatos.RData") y View(conj_datos)
+
