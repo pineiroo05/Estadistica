@@ -3,25 +3,34 @@ load("UniformSamples.RData")
 #Hay que recodificar para crear las variables LBx1, LBx2...
 
 #LARRY BIRD
-UniformSamples$LBx1 <- ifelse(UniformSamples$LB1 <= 0.356, 0, 1)
-UniformSamples$LBx2 <- ifelse(UniformSamples$LB2 <= 0.376, 0, 1)
-UniformSamples$LBx3 <- ifelse(UniformSamples$LB3 <= 0.369, 0, 1)
-UniformSamples$LBx4 <- ifelse(UniformSamples$LB4 <= 0.376, 0 ,1)
-UniformSamples$LBx5 <- ifelse(UniformSamples$LB5 <= 0.356, 0, 1)
+var_lb <- c("LB1", "LB2", "LB3", "LB4", "LB5")
+probs_lb <- c(0.356, 0.376, 0.369, 0.376, 0.356)
+
+UniformSamples[paste0("LBx", 1:5)] <- mapply(
+    function(v, p) ifelse(UniformSamples[[v]] <= p, 0, 1),
+    v = var_lb,
+    p = probs_lb
+)
 
 #CRAIG HODGES
-UniformSamples$CHx1 <- ifelse(UniformSamples$CH1 <= 0.364, 0, 1)
-UniformSamples$CHx2 <- ifelse(UniformSamples$CH2 <= 0.4, 0, 1)
-UniformSamples$CHx3 <- ifelse(UniformSamples$CH3 <= 0.405, 0, 1)
-UniformSamples$CHx4 <- ifelse(UniformSamples$CH4 <= 0.4, 0, 1)
-UniformSamples$CHx5 <- ifelse(UniformSamples$CH5 <= 0.364, 0, 1)
+var_ch <- c("CH1", "CH2", "CH3", "CH4", "CH5")
+probs_ch <- c(0.364, 0.4, 0.405, 0.4, 0.364)
+
+UniformSamples[paste0("CHx", 1:5)] <- mapply(
+    function(v, p) ifelse(UniformSamples[[v]] <= p, 0, 1),
+    v = var_ch,
+    p = probs_ch
+)
 
 #DEVIN BOOKER
-UniformSamples$DBx1 <- ifelse(UniformSamples$DB1 <= 0.329, 0, 1)
-UniformSamples$DBx2 <- ifelse(UniformSamples$DB2 <= 0.357, 0, 1)
-UniformSamples$DBx3 <- ifelse(UniformSamples$DB3 <= 0.385, 0, 1)
-UniformSamples$DBx4 <- ifelse(UniformSamples$DB4 <= 0.357, 0, 1)
-UniformSamples$DBx5 <- ifelse(UniformSamples$DB5 <= 0.329, 0, 1)
+var_db <- c("DB1", "DB2", "DB3", "DB4", "DB5")
+probs_db <- c(0.329, 0.357, 0.385, 0.357, 0.329)
+
+UniformSamples[paste0("DBx", 1:5)] <- mapply(
+    function(v, p) ifelse(UniformSamples[[v]] <= p, 0,1),
+    v = var_db,
+    p = probs_db
+)
 
 #Ahora las z
 UniformSamples$z1 <- with(UniformSamples, LBx1 & LBx2 & LBx3 & LBx4 & LBx5)
