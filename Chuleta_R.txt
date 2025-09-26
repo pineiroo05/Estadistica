@@ -12,3 +12,5 @@
 > Ojo, si luego lo quiero cargar y mostrar seria: load("ConjDatos.RData") y View(conj_datos)
 
 #PARA HACER LAS COMBINACIONES: choose(n, k)
+lapply() aplica una funcion a cada elemento de un vector
+mapply() lo mismo, pero permite aplicarla a varios vectores a la vez
