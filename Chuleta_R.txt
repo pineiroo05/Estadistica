@@ -25,6 +25,20 @@ file.copy() -> copiar fichero
 dir.create()->crea directorios
 dir.create(file.path("testdir2", "testdir3"), recursive = TRUE) -> crearia los 2 directorios anidados esos en mi esp de trabajo actual. 
 
+-SEQUENCE OF NUMBERS-
+ej de sec facil 1:5
+tmb se puede hacer con seq() pero ya hace + cosas
+seq(0, 10, by=0.5) hace una secuencia pero incrementa de 0.5 en 0.5
+seq(0, 10, length=30) lo mismo, una secuencia, pero quiero q tenga 30 valores dif entre 0 y 10
+length() igual q en java, devuelve el tamaño de la cadena
+1:length(my_seq) == seq(along.with = my_seq) == > seq(along.with = my_seq)
+rep() == replicate
+-> rep(0, times=40)
+-> rep(c(0, 1, 2), times=10)
+-> rep(c(0, 1, 2), each=10)
+
+-VECTORS-
+
 #CREAR Y VISUALIZAR DATAFRAME EN CONSOLA R
 
 > nombres<-c("Sonia", "Ana", "Mario")
