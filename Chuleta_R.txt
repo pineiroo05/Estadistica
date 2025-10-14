@@ -1,3 +1,30 @@
+-BASIC BUILDING BLOCKS-
+c() me sirve para crear vectores, tener en cuenta q un numero solo ya se interpreta como un vector de longitud 1.
+si p.ej me creo un vector z y luego hago 2*z multiplica todos los elem del vector por ese 2.
+
+sqrt()==square root//raiz cuadrada
+abs()==valor absoluto
+
+Si cojo 2 vectores del mismo tam, y le aplico una operacion (x+y, x e y vectores) le aplica la operacion elemento a elemento. OJO, si el hay un vector mas pequeño, r aplica reciclaje del vector, p.ej a<-(1, 2, 3) y hago 2+a, realmente haria c(2, 2, 2)+c(1, 2, 3)
+
+-WORKSPACE AND FILES-
+para ver mi directorio de trabajo-> getwd()
+cambiarlo-> setwd()
+para listar objetos de mi workspace-> ls()
+list.files() seria igual q el ls de linux
+con args() puedo ver los argumentos q necesita mi funcion
+dir.create() == mkdir
+file.create() -> para crear nuevos ficheros R
+file.remove() -> borrarlos
+file.exists() -> para ver si el fichero existe
+file.info() -> para ver la info del fichero
+IMPORTANTE el op $ me sirve para pillar elementos sueltos del fichero
+file.rename(aaa, bbb) -> renombrar
+file.copy() -> copiar fichero
+
+dir.create()->crea directorios
+dir.create(file.path("testdir2", "testdir3"), recursive = TRUE) -> crearia los 2 directorios anidados esos en mi esp de trabajo actual. 
+
 #CREAR Y VISUALIZAR DATAFRAME EN CONSOLA R
 
 > nombres<-c("Sonia", "Ana", "Mario")
@@ -6,7 +33,7 @@
 > conj_datos<-data.frame(Nombres=nombres, Edades=edades, Ciudad_origen=ciudad_origen)
 > summary(conj_datos)
 
-#VER DIRECTORIO DE TRABAJO: getwd() // CAMBIARLO: setwd()
+
 
 #GUARDAR EL DATAFRAME: save(conj_datos, file="ConjDatos.RData")
 > Ojo, si luego lo quiero cargar y mostrar seria: load("ConjDatos.RData") y View(conj_datos)
