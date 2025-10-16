@@ -38,6 +38,16 @@ rep() == replicate
 -> rep(c(0, 1, 2), each=10)
 
 -VECTORS-
+vectores logicos=3 valores true, false y NA (not available).
+paste -> pegar el contenido de un vector en una unica cadena.
+si hago paste con 2 vectores de tam diferente haria lo de 
+c( , ) -> me sirve para concatenar 2 vectores, no confundir con c() q es el de crear el vector.
+
+-MISSING VALUES-
+todo lo que sea NA, si lo opero de cualquier form me tiene q devolver NA.
+sample( , x) me deja pillar una muestra de tam x de un vector
+is.na() me sirve para ver si cada valor es o no un NA (devolveria true o false).
+NaN == not a number (p ej 0/0 o Inf-Inf)
 
 #CREAR Y VISUALIZAR DATAFRAME EN CONSOLA R
 
