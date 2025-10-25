@@ -49,6 +49,21 @@ sample( , x) me deja pillar una muestra de tam x de un vector
 is.na() me sirve para ver si cada valor es o no un NA (devolveria true o false).
 NaN == not a number (p ej 0/0 o Inf-Inf)
 
+-SUBSETTING VECTORS-
+extraer elementos de un vector en base a condiciones
+x[1:10] -> me sirve para ver las 10 primeras entradas del vector
+x[is.na(x)] -> devuelve un vector con los na de mi vector
+x[!is.na(x)] -> devuelve un vector sin los na de mi vector
+OJO->r usa el 'one-base index' que implica que el primer elemento del vector es la posicion 1, en c y demas el primero es 0.
+> x[c(3,5,7)] posiciones 3,5,7 del vector x
+x[c(-2,-10)]==x[-c(2,10)] me da todo menos las pos 2 y 10
+vect <- c(foo=11, bar=2, norf=NA)
+names(vect) sacaria foo bar y norf
+vect2 <- c(11,2,NA) & names(vect2) <- c("foo", "bar", "norf") hace lo mismo q arriba pero en mas pasos
+identical(x,y) true si son iguales, false si no
+vect["bar"] me sacaria el contenido de bar
+
+
 #CREAR Y VISUALIZAR DATAFRAME EN CONSOLA R
 
 > nombres<-c("Sonia", "Ana", "Mario")
